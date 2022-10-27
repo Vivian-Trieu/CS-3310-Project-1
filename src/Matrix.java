@@ -17,8 +17,8 @@ public class Matrix {
         printMatrix(B, n);
 
         runClassicalMatrix(A, B, n);
-        runStrassenMatrix(A, B, n);   
-        runDivideAndConquer(A, B, n);                    
+        runDivideAndConquer(A, B, n);
+        runStrassenMatrix(A, B, n);                    
     }
 
     // Classical Matrix  
@@ -35,7 +35,7 @@ public class Matrix {
         long endTime = System.nanoTime();
 
         // Print Product
-        System.out.println("\nProduct of the Matrices:");
+        System.out.println("Product of the Matrices:");
         printMatrix(C, n);
 
         // Calculate time to execute program
@@ -57,7 +57,7 @@ public class Matrix {
         long endTime = System.nanoTime();
 
         // Print Product
-        System.out.println("\nProduct of the Matrices:");
+        System.out.println("Product of the Matrices:");
         printMatrix(C, n);
 
         // Calculate time to execute program
@@ -79,7 +79,7 @@ public class Matrix {
         long endTime = System.nanoTime();
 
         // Print Product
-        System.out.println("\nProduct of the Matrices:");
+        System.out.println("Product of the Matrices:");
         printMatrix(C, n);
 
         // Calculate time to execute program
