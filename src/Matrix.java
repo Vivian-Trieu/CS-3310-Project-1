@@ -1,25 +1,41 @@
 public class Matrix {
     public static void main(String[] args) {
-        int n = 2;
-        int row1 = n, col1 = n, row2 = n, col2 = n;
-
-        int[][] firstMatrix = {{1, 1},
-                               {2, 2}};
-
-        int[][] secondMatrix = {{1, 1},
-                                {2, 2}};
+        int n = 4;
         
-        runClassicalMatrix(row1, col1, firstMatrix, row2, col2, secondMatrix);                       
+        int[][] A = {{1, 1, 1, 1},
+                     {2, 2, 2, 2},
+                     {3, 3, 3, 3},
+                     {4, 4, 4, 4}};
+
+        int[][] B = {{1, 1, 1, 1},
+                     {2, 2, 2, 2},
+                     {3, 3, 3, 3},
+                     {4, 4, 4, 4}};
+        
+        // Print First Matrix
+        System.out.println("\nFirst Matrix:");
+        printMatrix(A, n);
+
+        // Print Second Matrix
+        System.out.println("\nSecond Matrix:");
+        printMatrix(B, n);
+
+        runClassicalMatrix(A, B, n);                       
     }
 
-    private static void runClassicalMatrix (int row1, int col1, int[][] firstMatrix, 
-    int row2, int col2, int[][] secondMatrix){
+    // Classical Matrix  
+    public static void runClassicalMatrix (int[][] A, int[][] B, int n) {
+        System.out.println("Classical Matrix Implementation");
         // Start timer
         long startTime = System.currentTimeMillis();
-        
-        // Classical Matrix                        
+                         
+        // Calculate Product Matrix
         classicalMatrix classicalMatrix = new classicalMatrix();                         
-        classicalMatrix.multiplyMatrix(row1, col1, firstMatrix, row2, col2, secondMatrix);
+        int[][] C = classicalMatrix.multiplyMatrix(A, B);
+
+        // Print Product
+        System.out.println("\nProduct of the Matrices:");
+        printMatrix(C, n);
 
         // End timer
         long endTime = System.currentTimeMillis();
@@ -27,5 +43,20 @@ public class Matrix {
         // Calculate time to execute program
         long totalTime = endTime - startTime;
         System.out.println("Total Time to Execute Program (in milliseconds): " + totalTime);
+    }
+
+    // Divide and Conquer Matrix
+
+    // Strassen’s matrix multiplication
+
+
+    // Method to print Matrix
+    public static void printMatrix(int M[][], int n){
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < n; j++){
+                System.out.print(M[i][j] + " ");               
+            }
+            System.out.println();
+        }
     }
 }
