@@ -1,4 +1,10 @@
 public class classicalMatrix {
+    /**
+     * Classical Matrix Multiplication Implementation
+     * @param A
+     * @param B
+     * @return Product Matrix C
+     */
     public int[][] multiplyMatrix(int[][] A, int[][] B) {
         
         int n = A.length;    

@@ -20,18 +20,19 @@ public class Matrix {
         System.out.println("\nSecond Matrix:");
         printMatrix(B, n);
 
-        runClassicalMatrix(A, B, n);                       
+        runClassicalMatrix(A, B, n);
+        runStrassenMatrix(A, B, n);                       
     }
 
     // Classical Matrix  
     public static void runClassicalMatrix (int[][] A, int[][] B, int n) {
-        System.out.println("Classical Matrix Implementation");
+        System.out.println("\nClassical Matrix Multiplication: ");
         // Start timer
         long startTime = System.currentTimeMillis();
                          
         // Calculate Product Matrix
-        classicalMatrix classicalMatrix = new classicalMatrix();                         
-        int[][] C = classicalMatrix.multiplyMatrix(A, B);
+        classicalMatrix cMatrix = new classicalMatrix();                         
+        int[][] C = cMatrix.multiplyMatrix(A, B);
 
         // Print Product
         System.out.println("\nProduct of the Matrices:");
@@ -48,7 +49,26 @@ public class Matrix {
     // Divide and Conquer Matrix
 
     // Strassen’s matrix multiplication
+    public static void runStrassenMatrix(int[][] A, int[][] B, int n) {
+        System.out.println("\nStrassen Matrix Multiplication: ");
+        // Start timer
+        long startTime = System.currentTimeMillis();
 
+        // Calculate Product Matrix
+        strassenMatrix sMatrix = new strassenMatrix();
+        int[][] C = sMatrix.multiplyMatrix(A, B);
+
+        // Print Product
+        System.out.println("\nProduct of the Matrices:");
+        printMatrix(C, n);
+
+        // End timer
+        long endTime = System.currentTimeMillis();
+
+        // Calculate time to execute program
+        long totalTime = endTime - startTime;
+        System.out.println("Total Time to Execute Program (in milliseconds): " + totalTime);
+    }
 
     // Method to print Matrix
     public static void printMatrix(int M[][], int n){
