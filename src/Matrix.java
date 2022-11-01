@@ -1,12 +1,24 @@
+import java.util.Random;
+
 public class Matrix {
     public static void main(String[] args) {
         int n = 2;
+        Random r = new Random();
         
-        int[][] A = {{1, 1},
-                     {2, 2}};
+        // Generates matrix with random ints
+        int[][] A = createMatrix(n, r, -9, 9);
+        int[][] B = createMatrix(n, r, -9, 9);
 
-        int[][] B = {{1, 1},
-                     {2, 2}};
+        // Sanity check from instructions3170
+        // int[][] A = {{2, 0, -1, 6},
+        //              {3, 7, 8, 0},
+        //              {-5, 1, 6, -2},
+        //              {8, 0, 1, 7}};
+
+        // int[][] B = {{0, 1, 6, 3},
+        //              {-2, 8, 7, 1},
+        //              {2, 0, -1, 0},
+        //              {9, 1, 6, -2}}; 
         
         // Print First Matrix
         System.out.println("\nMatrix A:");
@@ -88,12 +100,24 @@ public class Matrix {
     }
 
     // Method to print Matrix
-    public static void printMatrix(int M[][], int n){
+    private static void printMatrix(int M[][], int n) {
         for (int i = 0; i < n; i++){
             for (int j = 0; j < n; j++){
                 System.out.print(M[i][j] + " ");               
             }
             System.out.println();
         }
+    }
+
+    private static int[][] createMatrix(int n, Random random, int min, int max) {
+        int [][] m = new int[n][n];
+        
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                m[i][j] = random.nextInt(max - min + 1) + min;
+            }
+        }
+
+        return m;
     }
 }
