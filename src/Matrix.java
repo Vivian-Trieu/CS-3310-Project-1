@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Matrix {
     public static void main(String[] args) {
-        int n = 2;
+        int n = 512;
         Random r = new Random();
         
         // Generates matrix with random ints
@@ -10,16 +10,16 @@ public class Matrix {
         int[][] B = createMatrix(n, r, -9, 9);
 
         // Sanity check from instructions3170
-        // int[][] A = {{2, 0, -1, 6},
-        //              {3, 7, 8, 0},
-        //              {-5, 1, 6, -2},
-        //              {8, 0, 1, 7}};
+        /* int[][] A = {{2, 0, -1, 6},
+                      {3, 7, 8, 0},
+                      {-5, 1, 6, -2},
+                      {8, 0, 1, 7}};
 
-        // int[][] B = {{0, 1, 6, 3},
-        //              {-2, 8, 7, 1},
-        //              {2, 0, -1, 0},
-        //              {9, 1, 6, -2}}; 
-        
+        int[][] B = {{0, 1, 6, 3},
+                      {-2, 8, 7, 1},
+                      {2, 0, -1, 0},
+                      {9, 1, 6, -2}}; 
+        */
         // Print First Matrix
         System.out.println("\nMatrix A:");
         printMatrix(A, n);
