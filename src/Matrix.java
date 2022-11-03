@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Matrix {
     public static void main(String[] args) {
-        int n = 512;
+        int n = 2;
         Random r = new Random();
         
         // Generates matrix with random ints
