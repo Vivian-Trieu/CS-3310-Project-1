@@ -2,15 +2,15 @@ import java.util.Random;
 
 public class Matrix {
     public static void main(String[] args) {
-        int n = 2;
-        Random r = new Random();
+        int n = 4;
+        // Random r = new Random();
         
         // Generates matrix with random ints
-        int[][] A = createMatrix(n, r, -9, 9);
-        int[][] B = createMatrix(n, r, -9, 9);
+        // int[][] A = createMatrix(n, r, -9, 9);
+        // int[][] B = createMatrix(n, r, -9, 9);
 
         // Sanity check from instructions3170
-        /* int[][] A = {{2, 0, -1, 6},
+        int[][] A = {{2, 0, -1, 6},
                       {3, 7, 8, 0},
                       {-5, 1, 6, -2},
                       {8, 0, 1, 7}};
@@ -19,7 +19,7 @@ public class Matrix {
                       {-2, 8, 7, 1},
                       {2, 0, -1, 0},
                       {9, 1, 6, -2}}; 
-        */
+        
         // Print First Matrix
         System.out.println("\nMatrix A:");
         printMatrix(A, n);
